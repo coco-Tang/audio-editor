@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <div style="margin-top: 5px;margin-bottom: 5px;">
+        <label for="audio-file">Choose an audio file:</label>
+        <br />
+        <input type="file" id="audio-file" accept="audio/*">
+        <br />
+    </div>
+    <div id="waveform-container">
+        <div id="waveform-minimap">
+        </div>
+        <div id="waveform">
+        </div>
+    </div>
+    <div style="margin-top: 5px;margin-bottom: 5px;">
+        <button type="button" id="btn-play">Play</button>
+            From:
+        <select name="play-from" id="play-from">
+            <option value="begin" selected>Begin</option>
+            <option value="cursor">Cursor</option>
+            <option value="select">Select</option>
+            <option value="region">Region</option>
+        </select>
+        Loop:
+        <select name="loop-mode" id="loop-mode">
+            <option value="off" selected>Off</option>
+            <option value="on">On</option>
+        </select>
+        <button type="button" id="btn-pause">Pause</button>
+        <button type="button" id="btn-stop">Stop</button>
+        <button type="button" id="btn-vol-up">Vol+</button>
+        <button type="button" id="btn-vol-down">Vol-</button>
+        <button type="button" id="btn-mute">Mute</button>
+        <button type="button" id="btn-unmute">Unmute</button>
+        <button type="button" id="btn-zoom-in">Zoom In</button>
+        <button type="button" id="btn-zoom-out">Zoom Out</button>
+        <button type="button" id="btn-edit-copy">Copy</button>
+        <button type="button" id="btn-edit-cut">Cut</button>
+        <button type="button" id="btn-edit-paste">Paste</button>
+        <br />
+        <button type="button" id="btn-region-add">Add Region</button>
+        <button type="button" id="btn-region-remove">Remove Region</button>
+        <button type="button" id="btn-region-edit">Edit Region</button>
+        <br />
+        Buffer Ops:
+        <select name="buffer-range" id="buffer-range">
+            <option value="full" selected>Full</option>
+            <option value="select">Select</option>
+            <option value="region">Region</option>
+        </select>
+        <button type="button" id="btn-buffer-silence">Silence</button>
+        <button type="button" id="btn-buffer-amplify">Amplify</button>
+        <button type="button" id="btn-buffer-norm">Normalize</button>
+    </div>
+    <div id="waveform-debug">
+    </div>
+</body>
+
+</html>
